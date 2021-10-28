@@ -3,7 +3,7 @@
         <template #content>
             <div class="main-wrapper">
                 <div class="page-header">
-                    Usergroup list
+                    Usergroupd list
                 </div>
 
                 <div class="main-box box-default">
