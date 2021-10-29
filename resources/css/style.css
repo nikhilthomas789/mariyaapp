@@ -292,29 +292,32 @@ p.text-danger{
   position: relative;
   margin-bottom: 0px;
 }
-.spl-input {
+.spl-input, .form-control {
   text-align: left;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  font-size: 1rem;
+  padding: 10px 10px 10px 5px !important;
   display: block;
   width: 100%;
   border: none;
   border: 1px solid #d4d4d4 !important;
   border-radius: 5px;
   overflow: hidden;
+  height: auto !important;
+  margin-bottom: 10px;
 }
 .spl-input:focus {
   outline: none;
 }
 
 .spl-label {
-  color: #909090;
-  font-size: 15px;
+  color: var(--gray-dark);
+  font-size: 1rem;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 15px;
-  top: 12px;
+  top: 8px;
+  margin: 0;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
