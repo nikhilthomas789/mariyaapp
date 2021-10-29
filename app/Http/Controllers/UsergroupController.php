@@ -41,22 +41,16 @@ class UsergroupController extends BaseController
 
   public function list()
   {
-    $data=$this->load();
-
-   // return Inertia::render('List',json_decode($data));
-
-    
+    $data=$this->load();    
     return Inertia::render('List');
   }
-  public function load(){
+  public function load()
+  {
     return datatables()->of(Usergroup::query())->make(true);
-    //return DataTables::of(Usergroup::select('id','name'))->make(true);
   }
 
   public function permission(Request $request, $id)
   {
-
-
     $data = Menu::where('parent_id', '=', 0)->get();
 
 
