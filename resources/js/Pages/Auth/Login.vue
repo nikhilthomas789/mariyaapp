@@ -1,18 +1,63 @@
 <template>
     <Head title="Log in" />
 
-    <jet-authentication-card>
-        <template #logo>
-            <jet-authentication-card-logo />
-        </template>
+    
+    <div class="login-wrap">
+        <div class="login-contanier">
+            <div class="img-box">
+                <img src="images/logo.png" alt="#" />
+            </div>
+            <div class="body">
+                <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
+                    {{ status }}
+                </div>
+                <form @submit.prevent="submit" novalidate>
+                    <div class="group">      
+                        <input type="email" class="spl-input" v-model="form.email" required>
+                        <label class="f-label spl-label">Username</label>
+                    </div>
+
+                    <div class="group">      
+                        <input type="password" class="spl-input" v-model="form.password" required autocomplete="current-password">
+                        <label class="f-label spl-label">password</label>
+                    </div>                    
+
+                    <div class="group ">      
+                        <ul>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Remember me!
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <Link v-if="canResetPassword" :href="route('password.request')">
+                                    Forgot your password?
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>  
+
+                    <div class="group">      
+                        <button class="btn btn-outline-success btn-block text-uppercase" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                            Login
+                        </button>
+                    </div>                     
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- <jet-authentication-card>
 
         <jet-validation-errors class="mb-4" />
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
+        
 
-        <form @submit.prevent="submit">
+        <form >
             <div>
                 <jet-label for="email" value="Email" />
                 <jet-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus />
@@ -40,8 +85,10 @@
                 </jet-button>
             </div>
         </form>
-    </jet-authentication-card>
+    </jet-authentication-card> -->
+    
 </template>
+
 
 <script>
     import { defineComponent } from 'vue'
