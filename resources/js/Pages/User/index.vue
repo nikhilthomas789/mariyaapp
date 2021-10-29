@@ -5,13 +5,8 @@
                 <div class="page-header">
                     Users
                 </div>
-                <div class="main-box">
-                    <div class="head">
-                        <div class="title">
-                            
-                        </div>
-                    </div>
-                    <div class="body">
+                <div class="main-box box-default">
+                    <div class="body with-border">
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -23,32 +18,32 @@
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="group">      
-                                        <input type="text" required>
+                                        <input type="text" class="spl-input" required>
                                         <span class="span1"></span>
-                                        <label class="f-label">Name</label>
+                                        <label class="f-label spl-label">Name</label>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="group">      
-                                        <input type="text" required>
+                                        <input type="text" class="spl-input" required>
                                         <span class="span1"></span>
-                                        <label class="f-label">Email</label>
+                                        <label class="f-label spl-label">Email</label>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="group">      
-                                        <input type="text" required>
+                                        <input type="text" class="spl-input" required>
                                         <span class="span1"></span>
-                                        <label class="f-label">Username</label>
+                                        <label class="f-label spl-label">Username</label>
                                     </div>
                                 </div>
                                 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="group">      
-                                        <input type="text" required>
+                                        <input type="text" class="spl-input" required>
                                         <span class="span1"></span>
-                                        <label class="f-label">Password</label>
+                                        <label class="f-label spl-label">Password</label>
                                     </div>
                                 </div>
 
